@@ -1,0 +1,16 @@
+<div class="search-box">
+    <div>
+        <input type="text" [(ngModel)]="searchText" class="form-control" name="filterDesc" id="filterDesc"
+            placeholder="Filter..." />
+        <div>Buscando: {{searchText}}</div>
+    </div>
+
+    <form action="">
+        <input type="text" [(ngModel)]="user.name" class="form-control" name="name" id="name" placeholder="Nombre">
+        <input type="email" [(ngModel)]="user.email" class="form-control" name="email" id="email" placeholder="Email">
+
+        <div>Nombre: {{user.name}}</div>
+        <div>Email: {{user.email}}</div>
+    </form>
+
+</div>

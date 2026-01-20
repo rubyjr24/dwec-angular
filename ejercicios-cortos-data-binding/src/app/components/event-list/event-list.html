@@ -1,0 +1,10 @@
+
+<input type="text" placeholder="Título del evento" [(ngModel)]="filter">
+<div class="event-container">
+    @for (event of events | titleFilter: filter; track event.id) {
+        <div class="event">
+            <h3>{{event.title}}</h3>
+            <p>{{event.description}}</p>
+        </div>
+    }
+</div>
