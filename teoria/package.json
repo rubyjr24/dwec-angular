@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "github-w": "ng build --base-href /dwec-angular/teoria/ && xcopy \".\\dist\\teoria\\browser\\*\" \"..\\gh-pages\\teoria\" /E /I /H /C /Y",
+    "github-l": "ng build --base-href '/dwec-angular/teoria/' && mkdir ../gh-pages/teoria && cp -r ./dist/teoria/browser/* ../gh-pages/teoria"
   },
   "prettier": {
     "printWidth": 100,

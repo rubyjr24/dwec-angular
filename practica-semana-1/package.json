@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "github-w": "ng build --base-href /dwec-angular/practica-semana-1/ && xcopy \".\\dist\\practica-semana-1\\browser\\*\" \"..\\gh-pages\\practica-semana-1\" /E /I /H /C /Y",
-    "github-l": "ng build --base-href '/dwec-angular/practica-semana-1/' && cp -r ./dist/practica-semana-1/browser/* ../gh-pages/practica-semana-1"
+    "github-l": "ng build --base-href '/dwec-angular/practica-semana-1/' && mkdir ../gh-pages/practica-semana-1 && cp -r ./dist/practica-semana-1/browser/* ../gh-pages/practica-semana-1"
   },
   "prettier": {
     "printWidth": 100,

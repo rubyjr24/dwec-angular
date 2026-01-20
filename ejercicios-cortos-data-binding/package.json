@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "github-w": "ng build --base-href /dwec-angular/ejercicios-cortos-data-binding/ && xcopy \".\\dist\\ejercicios-cortos-data-binding\\browser\\*\" \"..\\gh-pages\\ejercicios-cortos-data-binding\" /E /I /H /C /Y",
+    "github-l": "ng build --base-href '/dwec-angular/ejercicios-cortos-data-binding/' && mkdir ../gh-pages/ejercicios-cortos-data-binding && cp -r ./dist/ejercicios-cortos-data-binding/browser/* ../gh-pages/ejercicios-cortos-data-binding"
   },
   "prettier": {
     "printWidth": 100,
