@@ -1,0 +1,14 @@
+@if (event) {
+    <img class="card-img-top" [src]="event.image">
+    <div class="card-body">
+        <h4 class="card-title">{{event.title | titlecase}}</h4>
+        <p class="card-text" [innerText]="event.description"></p>
+    </div>
+    <div class="text-end">
+        <button class="btn btn-danger ml-3" (click)="deleteEvento()">Delete</button>
+    </div>
+    <div class="card-footer text-muted">
+        {{event.date | date : 'dd/MM/y'}}
+        <span class="float-right">{{event.price | currency : 'EUR'}}</span>
+    </div>
+}
