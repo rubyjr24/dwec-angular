@@ -1,0 +1,11 @@
+<table border="1">
+    <tr>
+        <th>Tipo</th>
+        <th>Descripción</th>
+        <th>Estado</th>
+    </tr>
+    @for (incident of incidents; track $index) {
+        <!-- <tr incident-item [incident]="incident" (changedStateEvent)="changeState($index, $event)"></tr>-->
+        <tr incident-item [incident]="incident" (changedStateEvent)="incident.state = $event"></tr>
+    }
+</table>

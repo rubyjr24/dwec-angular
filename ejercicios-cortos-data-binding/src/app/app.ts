@@ -7,10 +7,12 @@ import { SearchBox } from "./components/search-box/search-box";
 import { PriceView } from "./components/price-view/price-view";
 import { EventList } from "./components/event-list/event-list";
 import { LifecycleTest } from "./components/lifecycle-test/lifecycle-test";
+import { NoticeList } from './components/notice-list/notice-list';
+import { IncidentList } from './components/incident-list/incident-list';
 
 @Component({
   selector: 'app-root',
-  imports: [UserProfile, TextStyle, StatusRow, HoverButton, SearchBox, PriceView, EventList, LifecycleTest],
+  imports: [UserProfile, TextStyle, StatusRow, HoverButton, SearchBox, PriceView, EventList, LifecycleTest, NoticeList, IncidentList],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
