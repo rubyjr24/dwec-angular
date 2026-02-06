@@ -14,3 +14,7 @@
     right: 20px;
     text-decoration: none;
 }
+
+#link > img{
+    max-width: 50%;
+}

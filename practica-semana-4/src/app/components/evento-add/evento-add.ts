@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { IEvent } from '../../interfaces/i-event';
 import { FormsModule } from '@angular/forms';
 import { NgStyle } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { EventoService } from '../../services/evento-service';
 
 @Component({
   selector: 'app-evento-add',
@@ -11,8 +12,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './evento-add.css',
 })
 export class EventoAdd {
-
-  @Output() newEventEmitter = new EventEmitter<IEvent>();
 
   imageLoaded = false;
 
@@ -24,8 +23,13 @@ export class EventoAdd {
     date: ''
   };
 
+  constructor(private eventoService: EventoService){}
+
   addEventShow() {
-    this.newEventEmitter.emit(this.newEvent);
+    this.eventoService.addEvent(this.newEvent).subscribe({
+      next: (res) => console.log('Evento creado!', res),
+      error: (err) => console.error('Ups!', err)
+    });
     this.newEvent = {
       title: '',
       description: '',

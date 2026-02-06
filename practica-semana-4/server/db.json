@@ -15,14 +15,6 @@
       "date": "2024-05-20",
       "description": "Descripción del segundo evento",
       "price": 40
-    },
-    {
-      "id": "f010",
-      "title": "12312",
-      "description": "1123",
-      "image": "",
-      "price": 1,
-      "date": "0123-03-12"
     }
   ]
 }
